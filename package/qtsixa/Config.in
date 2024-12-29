@@ -6,6 +6,10 @@ config BR2_PACKAGE_QTSIXA
         help
           Support for ps3 controllers.
 
+config QTSIXA
+    bool "QtSixA"
+    select LIBUSB_COMPAT
+
 
 comment "qtsixa depends on bluez5_utils libusb libusb-compat"
 	depends on !BR2_PACKAGE_BLUEZ5_UTILS || !BR2_PACKAGE_LIBUSB || !BR2_PACKAGE_LIBUSB_COMPAT
